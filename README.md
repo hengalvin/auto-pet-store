@@ -128,3 +128,13 @@ python run_test.py --path=tests/api/add_new_pet --create-report --open
 ** Allure report graphs**
 <img width="983" alt="image" src="https://github.com/user-attachments/assets/8b1d6282-2bc3-4d66-8977-889b21055c53" />
 
+## Future Roadmap
+This section outlines planned improvements and next steps to enhance this automation project:
+
+### Deployment & Scheduling
+- **Deploy test automation to a cloud service**
+- **Schedule recurring test runs** (e.g., daily, hourly) to monitor system health over time
+
+### Notifications & Insights
+- **Integrate email or webhook notifications** to alert stakeholders on test results
+- **Track test history and trend analysis** to evaluate long-term system stability and performance
