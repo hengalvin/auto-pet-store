@@ -4,5 +4,6 @@ venv/
 # Python cache
 __pycache__/
 
-# Logs
+# folders
 logs/
+reports/*
