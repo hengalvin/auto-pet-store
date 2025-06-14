@@ -1,14 +1,18 @@
 import pytest
+import allure
 from utils.requests import add_pet, get_pet
 from utils.tools import load_json
 from utils.status_codes import StatusCode
+from utils.config import TestConfig
 from schemas.pet import PetResponse
 
 
 payload_path = "../tests/api/add_new_pet/request.json"
 
-@pytest.mark.flaky(reruns=5, reruns_delay=1) #flaky test, retry when fail
+@pytest.mark.flaky(reruns=TestConfig.RETRY_LIMIT, reruns_delay=TestConfig.RETRY_DELAY) 
 @pytest.mark.parametrize("pet_name", ["Cat1", "Cat2"])
+@allure.title("TC001-Add new pet with custom name success")
+@allure.severity(allure.severity_level.CRITICAL)  # for demo purposes
 def test_can_add_new_pet(pet_name):
     # load payload and set name
     payload = load_json(payload_path)

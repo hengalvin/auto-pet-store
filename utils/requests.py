@@ -1,23 +1,21 @@
 import requests
 from utils.logger import logger
+from utils.config import TestConfig
 
-BASE_URL = "https://petstore.swagger.io/v2"
-HEADERS = {
-    "Content-Type": "application/json",
-    "accept": "application/json",
-}
+base_url = TestConfig.BASE_URL
+headers = TestConfig.DEFAULT_HEADERS
 
 def add_pet(payload):
-    url = f"{BASE_URL}/pet"
-    return create_request_wrapper("post", url, headers=HEADERS, payload=payload)
+    url = f"{base_url}/pet"
+    return create_request_wrapper("post", url, headers=headers, payload=payload)
 
 def get_pet(pet_id):
-    url = f"{BASE_URL}/pet/{pet_id}"
-    return create_request_wrapper("get", url, headers=HEADERS)
+    url = f"{base_url}/pet/{pet_id}"
+    return create_request_wrapper("get", url, headers=headers)
 
 def find_pet_by_status(status):
-    url = f"{BASE_URL}/pet/findByStatus"
-    return create_request_wrapper("get", url, headers=HEADERS, params={"status": status})
+    url = f"{base_url}/pet/findByStatus"
+    return create_request_wrapper("get", url, headers=headers, params={"status": status})
 
 
 def create_request_wrapper(method: str, url: str, payload=None, headers=None, params=None):
