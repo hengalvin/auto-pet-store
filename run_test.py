@@ -19,7 +19,7 @@ def main():
     pytest_cmd = [
         "pytest",
         "-v",
-        args.path,  # configurable if want to test 
+        args.path, 
     ]
 
     if args.create_report:

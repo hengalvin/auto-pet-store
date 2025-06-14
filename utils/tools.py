@@ -6,9 +6,3 @@ def load_json(file_name):
     with open(file_path) as f:
         return json.load(f)
     
-def log_response(response):
-    print(f"\n[Request] {response.request.method} {response.request.url}")
-    print(f"[Payload] {response.request.body}")
-    print(f"[Response] {response.status_code} {response.text}")
-
-
