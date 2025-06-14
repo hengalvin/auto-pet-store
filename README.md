@@ -1,21 +1,21 @@
-# 🐾 Auto-Pet-Store API Test Automation
+# Auto-Pet-Store API Test Automation
 
 Automated test suite for the [Swagger Petstore API](https://petstore.swagger.io/), built using **Pytest**, with **schema validation** via **Pydantic**, and beautiful **Allure reports**.
 
 ---
 
-## 📌 Features
+## Features
 
-- ✅ Modular test structure using **Pytest**
-- ✅ Reusable, abstracted **API client**
-- ✅ **Schema validation** with Pydantic
-- ✅ Integrated **Allure reporting**
-- ✅ Environment variable support for flexible test configs
-- ✅ Custom logging for request/response debugging
+- Modular test structure using **Pytest**
+- Reusable, abstracted **API client**
+- **Schema validation** with Pydantic
+- Integrated **Allure reporting**
+- Environment variable support for flexible test configs
+- Custom logging for request/response debugging
 
 ---
 
-## 🧪 Test Coverage
+## Test Coverage
 
 | Test Case ID | Description |
 |--------------|-------------|
@@ -27,7 +27,7 @@ Automated test suite for the [Swagger Petstore API](https://petstore.swagger.io/
 
 ---
 
-## 🧰 Tech Stack
+## Tech Stack
 
 - Python 3.9+
 - [Pytest](https://docs.pytest.org/)
@@ -37,11 +37,23 @@ Automated test suite for the [Swagger Petstore API](https://petstore.swagger.io/
 
 ---
 
-## ⚙️ Setup Instructions
+## Setup Instructions
 
-### 1. 📦 Clone the repo
+### 1. Clone the repo
 
 ```bash
 git clone https://github.com/your-username/auto-pet-store.git
 cd auto-pet-store
+```
+
+### 2. Install requirements
+
+```bash
 pip install -r requirements.txt
+```
+
+### 3. Install Allure-CLI (optional: if want to open allure report on the web)
+
+```bash
+brew install allure
+```
