@@ -1,0 +1,7 @@
+# Core Testing
+pytest
+requests
+pydantic
+
+# Reporting
+allure-pytest
