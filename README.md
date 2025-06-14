@@ -2,8 +2,6 @@
 
 Automated test suite for the [Swagger Petstore API](https://petstore.swagger.io/), built using **Pytest**, with **schema validation** via **Pydantic**, and beautiful **Allure reports** reporting
 
-<img width="983" alt="image" src="https://github.com/user-attachments/assets/d4887ffb-c8d7-4698-821c-656c384742cf" />
-
 ---
 
 ## Features
@@ -19,7 +17,7 @@ Automated test suite for the [Swagger Petstore API](https://petstore.swagger.io/
 
 ---
 
-## Test Coverage
+## Test Coverage & Result
 
 
 | Test Case ID | Description |
@@ -27,6 +25,8 @@ Automated test suite for the [Swagger Petstore API](https://petstore.swagger.io/
 | TC01 | Add new pet with custom name success |
 | TC02 | Find pet by status success |
 | TC03 | Find pet by ID success |
+
+<img width="983" alt="image" src="https://github.com/user-attachments/assets/8ec5dd90-fa24-45d0-a92f-802893f807de" />
 
 ---
 
@@ -92,6 +92,7 @@ python run_test.py
 
 ⚠️ Note: The --open option requires the Allure CLI to be installed on your system.
 
+<img width="1452" alt="image" src="https://github.com/user-attachments/assets/d3d2b9d1-04cd-4cb6-a0ab-9f181e0ede62" />
 
 
 ### Example Commands
@@ -116,10 +117,12 @@ python run_test.py --path=tests/api/add_new_pet --create-report --open
 ```
 ---
 
-## Allure Test Report Snapshots
+## Snapshots
+
+**Custom info & error logs**
+<img width="1319" alt="image" src="https://github.com/user-attachments/assets/1ad32646-d17b-4ea7-8774-0666952ff559" />
 
 
+** Allure report graphs**
 <img width="983" alt="image" src="https://github.com/user-attachments/assets/8b1d6282-2bc3-4d66-8977-889b21055c53" />
-
-<img width="983" alt="image" src="https://github.com/user-attachments/assets/8ec5dd90-fa24-45d0-a92f-802893f807de" />
 
