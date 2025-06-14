@@ -1,59 +1,125 @@
-# Auto-Pet-Store API Test Automation
+# Auto-Pet-Store Automation
 
-Automated test suite for the [Swagger Petstore API](https://petstore.swagger.io/), built using **Pytest**, with **schema validation** via **Pydantic**, and beautiful **Allure reports**.
+Automated test suite for the [Swagger Petstore API](https://petstore.swagger.io/), built using **Pytest**, with **schema validation** via **Pydantic**, and beautiful **Allure reports** reporting
+
+<img width="983" alt="image" src="https://github.com/user-attachments/assets/d4887ffb-c8d7-4698-821c-656c384742cf" />
 
 ---
 
 ## Features
 
-- Modular test structure using **Pytest**
-- Reusable, abstracted **API client**
-- **Schema validation** with Pydantic
-- Integrated **Allure reporting**
-- Environment variable support for flexible test configs
-- Custom logging for request/response debugging
+- Clean, **modular test structure** using Pytest
+- **Reusable and abstracted API client** for consistent and maintainable request handling
+- **Schema validation** using Pydantic for accurate and contract-based API testing
+- Integrated **Allure reporting** for detailed, visual test results
+- **Custom logging** for request/response debugging
+- Supports automatic **retries for flaky tests**
+- Custom **run commands** to easily execute specific test suites
+- Centralized **configuration file** to manage all test settings and constants in one place
 
 ---
 
 ## Test Coverage
 
+
 | Test Case ID | Description |
 |--------------|-------------|
-| TC01 | Create a new pet named `Cat1` and verify it was created |
-| TC02 | Create a new pet named `Cat2` and verify it was created |
-| TC03 | Retrieve pets with status `available` and validate all match |
-| TC04 | Retrieve pets with status `pending` and validate all match |
-| TC05 | Get pet by ID (e.g. `2`) and validate schema compliance |
+| TC01 | Add new pet with custom name success |
+| TC02 | Find pet by status success |
+| TC03 | Find pet by ID success |
 
 ---
 
 ## Tech Stack
 
+### Core Testing
 - Python 3.9+
-- [Pytest](https://docs.pytest.org/)
-- [Requests](https://docs.python-requests.org/)
-- [Pydantic](https://docs.pydantic.dev/) (v2) – for response schema validation
-- [Allure-Pytest](https://docs.qameta.io/allure/) – for test reporting
+- [Pytest](https://docs.pytest.org/en/stable/): Python testing framework for writing simple to scalable test cases
+- [Requests](https://requests.readthedocs.io/en/latest/): HTTP library for sending API requests
+- [Pydantic](https://docs.pydantic.dev/): Data validation and schema enforcement using Python type hints
+- [pytest-rerunfailures](https://github.com/pytest-dev/pytest-rerunfailures): Plugin to automatically rerun flaky tests
+
+### Reporting
+- [Allure Pytest](https://allurereport.org/): Plugin to generate detailed and interactive test reports
 
 ---
 
 ## Setup Instructions
+Pre-Requisite:
+- Python 3.9+
+- Homebrew
 
-### 1. Clone the repo
+#### 1. Clone the repo
 
 ```bash
 git clone https://github.com/your-username/auto-pet-store.git
 cd auto-pet-store
 ```
 
-### 2. Install requirements
+#### 2. Create virtual environment and install requirements
 
 ```bash
+python -m venv venv
 pip install -r requirements.txt
 ```
 
-### 3. Install Allure-CLI (optional: if want to open allure report on the web)
+#### 3. Install Allure-CLI (optional, but recommended: if want to open allure report on the web)
 
 ```bash
 brew install allure
 ```
+
+---
+
+## How to Run Tests
+
+This project uses `pytest` for automated testing and integrates with Allure for test reporting. You can run all tests or a specific test suite using the command-line interface.
+
+### Basic Command
+
+To execute the test suite, use the following command from the project root directory:
+
+```bash
+python run_test.py
+```
+
+### Command-Line Options
+| Argument          | Description                                                                                     | Example Usage                  |
+| ----------------- | ----------------------------------------------------------------------------------------------- | ------------------------------ |
+| `--path={path}`   | Run a specific test suite located at the given path. If omitted, all test suites will run.      | `--path=tests/api/add_new_pet` |
+| `--create-report` | Generate an Allure report at the end of the test execution.                                     | `--create-report`              |
+| `--open`          | Automatically open the generated Allure HTML report in the browser. Requires `--create-report`. | `--create-report --open`       |
+
+⚠️ Note: The --open option requires the Allure CLI to be installed on your system.
+
+
+
+### Example Commands
+**1. Run all tests and generate a report:**
+```bash
+python run_test.py --create-report
+```
+
+**2. Run only a specific test suite:**
+```bash
+python run_test.py --path=tests/api/add_new_pet
+```
+
+**3. Run a specific suite, generate a report:**
+```bash
+python run_test.py --create-report
+```
+
+**4. Run a specific suite, generate a report, and open it in your browser:**
+```bash
+python run_test.py --path=tests/api/add_new_pet --create-report --open
+```
+---
+
+## Allure Test Report Snapshots
+
+
+<img width="983" alt="image" src="https://github.com/user-attachments/assets/8b1d6282-2bc3-4d66-8977-889b21055c53" />
+
+<img width="983" alt="image" src="https://github.com/user-attachments/assets/8ec5dd90-fa24-45d0-a92f-802893f807de" />
+
