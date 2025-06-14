@@ -20,13 +20,13 @@ https://github.com/user-attachments/assets/a5e80e4e-b3d7-49ba-8068-74b6d87c065b
 ---
 
 ## Test Coverage & Result
-
-
 | Test Case ID | Description |
 |--------------|-------------|
 | TC01 | Add new pet with custom name success |
 | TC02 | Find pet by status success |
 | TC03 | Find pet by ID success |
+
+**Note:** *The Petstore API used in this project is a publicly available mocked service, which may occasionally return intermittent errors or unstable responses. To improve test reliability, a retry mechanism has been implemented to automatically reattempt failed API requests where applicable.*
 
 <img width="983" alt="image" src="https://github.com/user-attachments/assets/8ec5dd90-fa24-45d0-a92f-802893f807de" />
 
