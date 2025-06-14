@@ -2,6 +2,8 @@
 
 Automated test suite for the [Swagger Petstore API](https://petstore.swagger.io/), built using **Pytest**, with **schema validation** via **Pydantic**, and beautiful **Allure reports** reporting
 
+https://github.com/user-attachments/assets/a5e80e4e-b3d7-49ba-8068-74b6d87c065b
+
 ---
 
 ## Features
