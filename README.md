@@ -126,6 +126,14 @@ python run_test.py --path=tests/api/add_new_pet --create-report --open
 ## Future Roadmap
 This section outlines planned improvements and next steps to enhance this automation project:
 
+### Reporting Enhancements
+- **Extend Allure reports with custom metrics**, charts, or tags for better traceability
+
+### Integrate automation to TCM
+- **Auto Execute TestCase** on TCM
+- **Result Sync & Analytics.** See historical data, trends, flaky tests, and environment metadata.
+
+
 ### Deployment & Scheduling
 - **Deploy test automation to a cloud service**
 - **Schedule recurring test runs** (e.g., daily, hourly) to monitor system health over time
