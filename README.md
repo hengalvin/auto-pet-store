@@ -54,7 +54,7 @@ Pre-Requisite:
 #### 1. Clone the repo
 
 ```bash
-git clone https://github.com/your-username/auto-pet-store.git
+git clone https://github.com/hengalvin/auto-pet-store.git
 cd auto-pet-store
 ```
 
