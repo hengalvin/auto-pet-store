@@ -98,9 +98,9 @@ python run_test.py
 
 
 ### Example Commands
-**1. Run all tests and generate a report:**
+**1. Run all tests, generate and open test result report:**
 ```bash
-python run_test.py --create-report
+python run_test.py --create-report --open
 ```
 
 **2. Run only a specific test suite:**
@@ -108,12 +108,7 @@ python run_test.py --create-report
 python run_test.py --path=tests/api/add_new_pet
 ```
 
-**3. Run a specific suite, generate a report:**
-```bash
-python run_test.py --create-report
-```
-
-**4. Run a specific suite, generate a report, and open it in your browser:**
+**3. Run a specific suite, generate report only (don't open)**
 ```bash
 python run_test.py --path=tests/api/add_new_pet --create-report --open
 ```
