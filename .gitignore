@@ -7,3 +7,6 @@ __pycache__/
 # folders
 logs/
 reports/*
+
+# files
+.DS_Store
