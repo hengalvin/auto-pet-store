@@ -120,7 +120,7 @@ python run_test.py --path=tests/api/add_new_pet --create-report --open
 <img width="1319" alt="image" src="https://github.com/user-attachments/assets/1ad32646-d17b-4ea7-8774-0666952ff559" />
 
 
-** Allure report graphs**
+**Allure report graphs**
 <img width="983" alt="image" src="https://github.com/user-attachments/assets/8b1d6282-2bc3-4d66-8977-889b21055c53" />
 
 ## Future Roadmap
